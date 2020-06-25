@@ -1,5 +1,5 @@
 <%= stylesheet_link_tag 'sign_in' %>
-
+<%#creating the session %>
 <h1><%= t('.sign_in') %></h1>
 <div class="row">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>

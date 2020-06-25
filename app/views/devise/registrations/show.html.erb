@@ -1,10 +1,10 @@
 <%- model_class = User -%>
 <%= stylesheet_link_tag 'users' %>
-
 <div class="container text-center">
   <div class="page-header">
     <h1><%= @user.name %></h1>
   </div>
+  <%#user info%>
   <div class="row">
     <%= image_tag @user.avatar_url || image_path("missing_avatar.png"), id: 'profile-image'%>
   </div>
@@ -26,13 +26,7 @@
         <p class="description-text"><%= @user.telegram_username %></p>
     <% end %>
   </div>
-  <div class="row">
-    <% if @user.favourite_sports.present? %>
-        <p class="description-tag"><%= model_class.human_attribute_name(:favourite_sports) %></p>
-        <p class="description-text"><%= @user.favourite_sports %></p>
-    <% end %>
-  </div>
-  <div class="row">
+   <div class="row">
     <% if @user.contact_information.present? %>
         <p class="description-tag"><%= model_class.human_attribute_name(:contact_information) %></p>
         <p class="description-text"><%= @user.contact_information %></p>
