@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: teams
-#
-#  id               :integer          not null, primary key
-#  name             :string
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
-#  description      :text
-#  kind_of_sport    :string
-#  private          :boolean
-#  avatar_data      :text
-#  created_by_event :boolean          default(FALSE)
-#
 
 class Team < ApplicationRecord
   default_scope { order(created_at: :asc) }

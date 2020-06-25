@@ -8,6 +8,7 @@
   },
   responsive: true, fluid: true do
 %>
+<%#displayng the home page dash borad profile and other different options%>
 
     <% if (request.user_agent =~ /Mobile|webOS/).present? # check if user is moving a mobile device     %>
         <%= menu_group pull: :right do %>
